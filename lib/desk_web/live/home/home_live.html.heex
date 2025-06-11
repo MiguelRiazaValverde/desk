@@ -20,12 +20,21 @@
     border-radius: 6px;
     max-width: 600px;
     line-height: 1.4;
-  text-align: justify;
+    text-align: justify;
   }
   .main {
     width: 500px;
     margin-left: auto;
     margin-right: auto;
+  }
+  .keyboard-layout {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    font-size: 12px;
+    flex-direction: column;
   }
 </style>
 
@@ -92,5 +101,20 @@
       
       <li>All synth events are shared instantly with all participants.</li>
     </ul>
+  </div>
+  
+  <div class="keyboard-layout">
+    <p>
+      <span style="color: red !important;">Important:</span> press keys to play the synthesizer
+    </p>
+     <pre><code>
+  │2│ │3│     │5│ │6│ │7│     │9│ │0│
+│Q│ │W│ │E│ │R│ │T│ │Y│ │U│ │I│ │O│ │P│
+    </code></pre>
+    <hr /> <pre><code>
+  │S│ │D│     │G│ │H│ │J│     │L│
+│Z│ │X│ │C│ │V│ │B│ │N│ │M│ │,│ │.│
+    </code></pre>
+    <br />
   </div>
 </div>
