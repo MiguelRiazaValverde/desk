@@ -61,7 +61,9 @@ Hooks.Instrument = {
       instrument.editable(socket);
   },
   updated() {
-    console.log("updated");
+    this.params = JSON.parse(el.dataset.params);
+    if (this.params.id == socket.id)
+      el.classList.add("editable");
   },
   destroyed() {
     Instrument.deleteInstrument(this.params.id);
