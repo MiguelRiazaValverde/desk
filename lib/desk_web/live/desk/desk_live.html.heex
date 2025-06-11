@@ -1,0 +1,8 @@
+<script defer phx-track-static type="text/javascript" src={~p"/assets/app.js"}>
+</script>
+
+<div id="instruments">
+  <%= for {user, params} <- @data do %>
+    <.live_component module={DeskWeb.InstrumentComponent} id={user} params={params} />
+  <% end %>
+</div>

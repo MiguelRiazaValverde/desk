@@ -1,0 +1,96 @@
+<%!-- <div class="login-form">
+  <h2>Unirse a una sala</h2>
+  
+  <%= if @error do %>
+    <p class="text-red-500">{@error}</p>
+  <% end %>
+  
+  <.form :let={f} for={%{}} as={:login} phx-submit="join">
+    <.input field={f[:desk]} label="desk" value={@desk} />
+    <.input field={f[:password]} type="password" label="password" value={@password} />
+    <.button>Entrar</.button>
+  </.form>
+</div> --%>
+<style>
+  .text {
+    font-family: 'Fira Mono', Consolas, 'Courier New', monospace;
+    color: #eee;
+    background: #111;
+    padding: 1rem;
+    border-radius: 6px;
+    max-width: 600px;
+    line-height: 1.4;
+  text-align: justify;
+  }
+  .main {
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+</style>
+
+<div class="main">
+  <pre>
+<code class="ascii">
+  ░▒▓███████▓▒░░▒▓████████▓▒░░▒▓███████▓▒░▒▓█▓▒░░▒▓█▓▒░
+  ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░      ░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░
+  ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░      ░▒▓█▓▒░      ░▒▓█▓▒░░▒▓█▓▒░
+  ░▒▓█▓▒░░▒▓█▓▒░▒▓██████▓▒░  ░▒▓██████▓▒░░▒▓███████▓▒░
+  ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░             ░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░
+  ░▒▓█▓▒░░▒▓█▓▒░▒▓█▓▒░             ░▒▓█▓▒░▒▓█▓▒░░▒▓█▓▒░
+  ░▒▓███████▓▒░░▒▓████████▓▒░▒▓███████▓▒░░▒▓█▓▒░░▒▓█▓▒░
+                          Shared Synthesizer Playground
+</code>
+</pre>
+  <div class="text">
+    <h2 style="color: #0af;">Welcome to <strong>DeskSynth</strong></h2>
+    
+    <p>
+      A minimal, distraction-free collaborative synthesizer playground.<br />
+      Each “desk” is a shared synth session, created, joined, and shared simply by changing the URL path (e.g., <code>/MyDesk</code>).
+    </p>
+    
+    <p>
+      There are no public desk lists, so you can use secret desk names for private jam sessions.
+    </p>
+    
+    <p>
+      Here are some pre-made desks you can join:<br />
+      <a href="/Jazz" style="color: #0af; text-decoration: underline;"><code>/Jazz</code></a>
+      <a href="/House" style="color: #0af; text-decoration: underline;"><code>/House</code></a>
+      <br />
+      <a href="/Dubstep" style="color: #0af; text-decoration: underline;">
+        <code>/Dubstep</code>
+      </a>
+      
+      <a href="/Ambient" style="color: #0af; text-decoration: underline;">
+        <code>/Ambient</code>
+      </a>
+       <a href="/Techno" style="color: #0af; text-decoration: underline;"><code>/Techno</code></a>
+      <br />
+      <a href="/DrumAndBass" style="color: #0af; text-decoration: underline;">
+        <code>/DrumAndBass</code>
+      </a>
+      
+      <a href="/Synthwave" style="color: #0af; text-decoration: underline;">
+        <code>/Synthwave</code>
+      </a>
+       <br /> And here’s a random desk generated just for you:
+      <a href={"/#{@random_desk}"} style="color: #0af; text-decoration: underline;">
+        <code>/{@random_desk}</code>
+      </a>
+    </p>
+    
+    <h3 style="color: #0af;">How it works:</h3>
+    
+    <ul>
+      <li>
+        Everyone connected to the same desk controls and hears the same synthesizer in real time.
+      </li>
+      
+      <li>Play notes, tweak parameters, and jam together from anywhere.</li>
+      
+      <li>All synth events are shared instantly with all participants.</li>
+    </ul>
+  </div>
+</div>
